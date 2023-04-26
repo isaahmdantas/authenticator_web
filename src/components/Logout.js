@@ -1,7 +1,7 @@
 function Logout({setCurrUser}) {
     const logout=async (setCurrUser)=>{
         try {
-            const response=await fetch("http://localhost:3001/users/sign_out",{
+            const response=await fetch("https://sheltered-falls-60534.herokuapp.com/users/sign_out",{
                 method: "delete",
                 headers: {
                     "content-type": "application/json",

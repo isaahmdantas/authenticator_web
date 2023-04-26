@@ -3,7 +3,7 @@ import { useRef } from "react"
 function Signup({setCurrUser, setShow}) {
     const formRef = useRef()
     const signup=async (userInfo, setCurrUser)=>{
-        const url="http://localhost:3001/users"
+        const url="https://sheltered-falls-60534.herokuapp.com/users"
         try{
             const response=await fetch(url, {
                 method: 'post',

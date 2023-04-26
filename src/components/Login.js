@@ -4,7 +4,7 @@ function Login({setCurrUser, setShow}) {
   const formRef=useRef()
 
     const login=async (userInfo, setCurrUser)=>{
-        const url="http://localhost:3001/users/sign_in"
+        const url="https://sheltered-falls-60534.herokuapp.com/users/sign_in"
         try{
             const response=await fetch(url, {
                 method: "post",
