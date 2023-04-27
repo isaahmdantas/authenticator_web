@@ -22,7 +22,7 @@ function Logout({setCurrUser}) {
     }
     return (
         <div>
-            <input type="button" value='Deslogar' onClick={handleClick}/>
+            <input type="button" value='Deslogar' onClick={handleClick}  className="btn btn-primary btn-lg px-4 gap-3" />
         </div>
     )
 }

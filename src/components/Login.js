@@ -1,3 +1,5 @@
+import logo from '../logo.png';
+
 import { useRef } from "react"
 
 function Login({setCurrUser, setShow}) {
@@ -42,15 +44,25 @@ function Login({setCurrUser, setShow}) {
 
     return(
         <div>
-            <form ref={formRef} onSubmit={handleSubmit}>
-                E-mail: <input type="email" name='email' placeholder="email" />
-                <br/>
-                Senha: <input type="password" name='password' placeholder="password" />
-                <br/>
-                <input type='submit' value="Login" />
+            <form ref={formRef} onSubmit={handleSubmit} className="form-signin">
+                <img src={logo} className="mb-4" alt="logo" width="72" height="72" />
+
+                <h1 className="h3 mb-3 fw-normal">Faça seu Login</h1>
+                
+                <div className="form-floating">
+                    <label htmlFor="email" className="sr-only">E-mail</label>
+                    <input type="email" name="email" className="form-control" placeholder="E-mail" />
+                </div>
+
+                <div className="form-floating">
+                    <label htmlFor="password" className="sr-only">Senha</label>
+                    <input type="password" name='password' class="form-control" placeholder="Senha" />
+                </div>
+    
+                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
             </form>
             <br />
-            <div>Não registrado ainda, <a href="#signup" onClick={handleClick} >Inscrever-se</a> </div>
+            <div>Não é registrado ainda ? <a href="#signup" onClick={handleClick} >Inscrever-se</a> </div>
         </div>
     )
 }
